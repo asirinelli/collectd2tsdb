@@ -1,0 +1,6 @@
+{
+    "Endpoint": "https://opentsdb.iot.runabove.io/api/put",
+    "User": "XXX",
+    "Password": "YYY",
+    "Bind": "0.0.0.0:8000"
+}
