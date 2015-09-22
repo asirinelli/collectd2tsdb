@@ -103,7 +103,10 @@ func sendToOpentsdb(data []OpentsdbValue) {
 			log.Println("error:", err)
 			return
 		}
-		log.Println(fmt.Sprintf("Response from server (if any): (%s) %s", resp.Status, string(body)))
+		log.Println(len(data), " data points sent.")
+		if resp.StatusCode != 204 {
+			log.Println(fmt.Sprintf("Response from server: (%s) %s", resp.Status, string(body)))
+		}
 	}
 
 }
